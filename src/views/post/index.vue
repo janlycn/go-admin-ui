@@ -87,7 +87,7 @@
           <el-table-column label="状态" align="center" prop="status" :formatter="statusFormat">
             <template slot-scope="scope">
               <el-tag
-                :type="scope.row.status === '1' ? 'danger' : 'success'"
+                :type="scope.row.status === 1 ? 'danger' : 'success'"
                 disable-transitions
               >{{ statusFormat(scope.row) }}</el-tag>
             </template>
@@ -142,7 +142,7 @@
                 <el-radio
                   v-for="dict in statusOptions"
                   :key="dict.dictValue"
-                  :label="dict.dictValue"
+                  :label="+dict.dictValue"
                 >{{ dict.dictLabel }}</el-radio>
               </el-radio-group>
             </el-form-item>
